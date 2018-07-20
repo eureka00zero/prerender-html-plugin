@@ -11,8 +11,6 @@
   "author": "wangchang <wangchang@staff.sina.com.cn>",
   "license": "ISC",
   "dependencies": {
-    "prerender-spa-plugin": "^3.2.1",
-    "puppeteer": "^1.6.0"
   },
   "engines": {
     "node": ">= 8.0.0",
