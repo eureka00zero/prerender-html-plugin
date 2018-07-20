@@ -1,6 +1,6 @@
 {
   "name": "@mfelibs/prerender-html-plugin",
-  "version": "1.0.13",
+  "version": "0.0.18",
   "description": "预加载html插件",
   "main": "./src/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "author": "wangchang <wangchang@staff.sina.com.cn>",
   "license": "ISC",
   "dependencies": {
-    "copy-webpack-plugin": "^4.5.2",
-    "prerender-spa-plugin": "^2.0.1"
+    "prerender-spa-plugin": "^3.2.1",
+    "puppeteer": "^1.6.0"
   },
   "engines": {
     "node": ">= 8.0.0",

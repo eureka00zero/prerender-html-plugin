@@ -3,7 +3,7 @@
 // import path from "path"
 
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
-const CopyWebpackPluginSpa = require('copy-webpack-plugin')
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 const path = require('path');
 
 class PrerenderClass extends PrerenderSPAPlugin{
@@ -12,18 +12,19 @@ class PrerenderClass extends PrerenderSPAPlugin{
         options.staticDir = options.staticDir || path.join(rootPath('dist',options.entry));
         options.outputDir = options.staticDir || path.join(rootPath('dist',options.entry));
         options.routes = options.routes || ['/'];
-        options.other = options.other || {
-            captureAfterTime: 50000,
-            //忽略打包错误
-            ignoreJSErrors: true,
-            phantomOptions: '--web-security=false',
-            maxAttempts: 10,
-        }
-        new CopyWebpackPluginSpa([{
-            from: options.staticDir
-          }]),
+        options.renderer = options.renderer || new Renderer({
+            inject: {
+                foo: 'bar'
+              },
+              headless: false,
+              // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
+              renderAfterDocumentEvent: 'render-event'
+        })
+        // new CopyWebpackPluginSpa([{
+        //     from: options.staticDir
+        //   }]),
 
-        super(options.outputDir,options.routes,options.other)
+        super(options.staticDir,options.outputDir,options.routes,options.renderer)
 
 
         // new PrerenderSPAPlugin(
