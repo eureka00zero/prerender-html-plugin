@@ -2,7 +2,7 @@
 // import CopyWebpackPluginSPA from "copy-webpack-plugin"
 // import path from "path"
 
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const PrerenderSPAPlugin = require('../lib/prerender-spa-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 const path = require('path');
 

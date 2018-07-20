@@ -1,2 +1,3 @@
-const install = require("./lib/puppeteer/install")
-
+(async () => {
+    const install = require("./lib/puppeteer/install")
+})();   
