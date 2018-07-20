@@ -1,0 +1,21 @@
+{
+  "name": "@mfelibs/prerender-html-plugin",
+  "version": "1.0.13",
+  "description": "预加载html插件",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"mocha\"",
+    "dev": "marax dev",
+    "build": "marax lib"
+  },
+  "author": "wangchang <wangchang@staff.sina.com.cn>",
+  "license": "ISC",
+  "dependencies": {
+    "copy-webpack-plugin": "^4.5.2",
+    "prerender-spa-plugin": "^2.0.1"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
