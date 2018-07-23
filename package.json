@@ -1,6 +1,6 @@
 {
   "name": "@mfelibs/prerender-html-plugin",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "预加载html插件",
   "main": "./src/index.js",
   "scripts": {
