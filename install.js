@@ -1,6 +1,6 @@
-(async () => {
-    const install = require("./lib/puppeteer/install")
-})();   
+// (async () => {
+//     const install = require("./lib/puppeteer/install")
+// })();   
 
 
 // const puppeteer = require('./lib/puppeteer');
